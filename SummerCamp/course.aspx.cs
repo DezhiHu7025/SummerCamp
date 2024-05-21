@@ -27,7 +27,7 @@ namespace SummerCamp
             string product_name, product_d, product_time, fee,img_route;
             PlaceHolderList.Controls.Clear();
 
-            string sqlstr = "SELECT * FROM [db_forminf].[dbo].[product]  where shop_id='S0000082' and (Is_inner ='Z' OR Is_inner = 'N') AND Is_open = 'Y'  order by id";
+            string sqlstr = "SELECT * FROM [db_forminf].[dbo].[product]  where shop_id='S0000079' and (Is_inner ='Z' OR Is_inner = 'N') AND Is_open = 'Y'  order by id";
             DataSet myViewDate = lw.ReturnDataSet(sqlstr, "db_forminf");
             DataTable dt = myViewDate.Tables[0];//指定第0个表
             DataView myView = dt.DefaultView;
@@ -60,7 +60,7 @@ namespace SummerCamp
                 else
                 {
                     //如果报名人数已满，更新关闭课程
-                    string sqlstr2 = "update  [db_forminf].[dbo].[product] set Is_open = 'N' where shop_id='S0000082' and  product_id = '" + myRow["product_id"].ToString().Trim() + "'";
+                    string sqlstr2 = "update  [db_forminf].[dbo].[product] set Is_open = 'N' where shop_id='S0000079' and  product_id = '" + myRow["product_id"].ToString().Trim() + "'";
                     int aa = lw.EXECCommand(sqlstr2);
                 }
                

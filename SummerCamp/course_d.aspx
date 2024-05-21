@@ -6,7 +6,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1" />
-    <title>康桥2024暑期新生成长营</title>
+    <title>2024暑期戴维斯夏校</title>
     <link href="css/app.css" rel="stylesheet" />
 </head>
 <body class="framework7-root">

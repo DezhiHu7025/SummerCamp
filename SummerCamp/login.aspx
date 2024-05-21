@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>康桥2024暑期新生成长营</title>
+    <title>2024暑期戴维斯夏校</title>
     <link href="css/logincss.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript">
         function SkipNext() {
@@ -31,7 +31,7 @@
                     <tr style="background-color:#cc5599;">
                         <td style="text-align:left; vertical-align:middle; height:30px; padding-left:5px;" >
                             <span style="font-size:18px; color:White;">
-                                康桥2024暑期新生成长营
+                                2024暑期戴维斯夏校
                                 &nbsp;
                                 <asp:Label ID="lblDEMO" runat="server" Text="( DEMO Site )"></asp:Label>
                             </span>

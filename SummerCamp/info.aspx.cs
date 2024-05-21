@@ -111,7 +111,7 @@ namespace SummerCamp
         {
 
             string product_name, product_time, fee;
-            string sqlstr = "SELECT * FROM [db_forminf].[dbo].[product] where shop_id='S0000082' and  (Is_inner ='Z' OR Is_inner = 'N') AND Is_open = 'Y'  and id =" + ida;
+            string sqlstr = "SELECT * FROM [db_forminf].[dbo].[product] where shop_id='S0000079' and  (Is_inner ='Z' OR Is_inner = 'N') AND Is_open = 'Y'  and id =" + ida;
             DataSet myViewDate = lw.ReturnDataSet(sqlstr, "product");
             if (myViewDate.Tables[0].Rows.Count > 0)
             {
@@ -202,7 +202,7 @@ namespace SummerCamp
                 else
                 {
                     //如果报名人数已满，更新关闭课程
-                    string sqlstr2 = "update  [db_forminf].[dbo].[product] set Is_open = 'N' where shop_id='S0000082' and  product_id = '" + this.HiddenField7.Value.Trim() + "'";
+                    string sqlstr2 = "update  [db_forminf].[dbo].[product] set Is_open = 'N' where shop_id='S0000079' and  product_id = '" + this.HiddenField7.Value.Trim() + "'";
                     int aa = lw.EXECCommand(sqlstr2);
                     result = false;
                     return result;
@@ -435,7 +435,7 @@ values(@addtime,@mchSeqNo,@amount,@orderInfo,@remark,@inExtData)";
             SqlParameter p1 = new SqlParameter("@addtime", DateTime.Now);
             SqlParameter p2 = new SqlParameter("@mchSeqNo", KmchSeqNo);
             SqlParameter p3 = new SqlParameter("@amount", Convert.ToString(float.Parse(this.lbl_fee.Text.Trim()) * 100));
-            SqlParameter p4 = new SqlParameter("@orderInfo", "康桥2024暑期新生成长营");
+            SqlParameter p4 = new SqlParameter("@orderInfo", "2024暑期戴维斯夏校");
             SqlParameter p5 = new SqlParameter("@remark", this.HiddenField7.Value);
             if (dbl_Iszhusu.SelectedValue.Trim() != "aaa")
             {

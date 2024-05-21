@@ -32,7 +32,7 @@ namespace SummerCamp
                 return;
             }
             string KeyWord = txtKeyword.Text.Trim();
-            string sqlstr = "SELECT a.*,b.product_id as Bproduct_id,b.product_time  FROM [db_forminf].[dbo].[summer_indent] a left join [db_forminf].[dbo].[product] b on a.product_id = b.id where b.shop_id='S0000082' and (stuname = '" + KeyWord + "' OR phone = '" + KeyWord + "' )";
+            string sqlstr = "SELECT a.*,b.product_id as Bproduct_id,b.product_time  FROM [db_forminf].[dbo].[summer_indent] a left join [db_forminf].[dbo].[product] b on a.product_id = b.id where b.shop_id='S0000079' and (stuname = '" + KeyWord + "' OR phone = '" + KeyWord + "' )";
             DataTable dt1 = lw.GetDataTable1(sqlstr);
             if (dt1.Rows.Count == 0)
             {
