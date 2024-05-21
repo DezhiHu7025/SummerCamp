@@ -38,7 +38,7 @@ namespace SummerCamp
             myItem1.Value = "aaa";
             ddlStatus.Items.Add(myItem1);
 
-            string sqlstr = "select * from [db_forminf].[dbo].[product] where shop_id='S0000082' order by id";
+            string sqlstr = "select * from [db_forminf].[dbo].[product] where shop_id='S0000081' order by id";
             DataTable dt = lw.GetDataTable1(sqlstr);
             DataView myView = dt.DefaultView;
             foreach (DataRowView myRow in myView)
@@ -66,7 +66,7 @@ namespace SummerCamp
 
             PlaceHolderList.Controls.Clear();
 
-            string sqlstr = "select b.orderInfo,b.inExtData,b.remark as remark_b,a.amount,a.centerSeqId,a.remark as remark_a,a.noticetime,b.mchSeqNo  from [KsisecPay].[dbo].[Pay_Before] b left join  [KsisecPay].[dbo].[Pay_After] a on a.merchantSeq=b.merchantSeq where a.id is not null  and a.refundtime is null and a.id>22 and orderInfo='康桥2024暑期新生成长营'  order by a.noticetime desc";
+            string sqlstr = "select b.orderInfo,b.inExtData,b.remark as remark_b,a.amount,a.centerSeqId,a.remark as remark_a,a.noticetime,b.mchSeqNo  from [KsisecPay].[dbo].[Pay_Before] b left join  [KsisecPay].[dbo].[Pay_After] a on a.merchantSeq=b.merchantSeq where a.id is not null  and a.refundtime is null and a.id>22 and orderInfo='2024康桥夏令营'  order by a.noticetime desc";
             DataTable dt = lw.GetDataTable(sqlstr);
             DataView myView = dt.DefaultView;
 
@@ -81,7 +81,7 @@ namespace SummerCamp
                 string remark_a = myRow["remark_a"].ToString().Trim();
                 string mchSeqNo = myRow["mchSeqNo"].ToString().Trim();
 
-                string sqlstr1 = "SELECT a.*,b.product_id as Bproduct_id,b.product_time  FROM [db_forminf].[dbo].[summer_indent] a left join [db_forminf].[dbo].[product] b on a.product_id = b.id where b.shop_id='S0000082' and  a.mchSeqNo = '" + mchSeqNo + "' ";
+                string sqlstr1 = "SELECT a.*,b.product_id as Bproduct_id,b.product_time  FROM [db_forminf].[dbo].[summer_indent] a left join [db_forminf].[dbo].[product] b on a.product_id = b.id where b.shop_id='S0000081' and  a.mchSeqNo = '" + mchSeqNo + "' ";
                 DataTable dt1 = lw.GetDataTable1(sqlstr1);
                 DataView myView1 = dt1.DefaultView;
 
@@ -275,7 +275,7 @@ namespace SummerCamp
 
 
 
-            string sqlstr = "select b.orderInfo,b.inExtData,b.remark as remark_b,a.amount,a.centerSeqId,a.remark as remark_a,a.noticetime,b.mchSeqNo  from [KsisecPay].[dbo].[Pay_Before] b left join  [KsisecPay].[dbo].[Pay_After] a on a.merchantSeq=b.merchantSeq where a.id is not null  and a.refundtime is null and a.id>22 and orderInfo='康桥2024暑期新生成长营'  order by a.noticetime asc";
+            string sqlstr = "select b.orderInfo,b.inExtData,b.remark as remark_b,a.amount,a.centerSeqId,a.remark as remark_a,a.noticetime,b.mchSeqNo  from [KsisecPay].[dbo].[Pay_Before] b left join  [KsisecPay].[dbo].[Pay_After] a on a.merchantSeq=b.merchantSeq where a.id is not null  and a.refundtime is null and a.id>22 and orderInfo='2024康桥夏令营'  order by a.noticetime asc";
             DataTable dt = lw.GetDataTable(sqlstr);
             DataView myView = dt.DefaultView;
 
@@ -290,7 +290,7 @@ namespace SummerCamp
                 string remark_a = myRow["remark_a"].ToString().Trim();
                 string mchSeqNo = myRow["mchSeqNo"].ToString().Trim();
 
-                string sqlstr1 = "SELECT a.*,b.product_id as Bproduct_id,b.product_time  FROM [db_forminf].[dbo].[summer_indent] a left join [db_forminf].[dbo].[product] b on a.product_id = b.id where b.shop_id='S0000082' and  a.mchSeqNo = '" + mchSeqNo + "' ";
+                string sqlstr1 = "SELECT a.*,b.product_id as Bproduct_id,b.product_time  FROM [db_forminf].[dbo].[summer_indent] a left join [db_forminf].[dbo].[product] b on a.product_id = b.id where b.shop_id='S0000081' and  a.mchSeqNo = '" + mchSeqNo + "' ";
                 DataTable dt1 = lw.GetDataTable1(sqlstr1);
                 DataView myView1 = dt1.DefaultView;
 

@@ -17,7 +17,7 @@ namespace SummerCamp
         LeaveWord lw = new LeaveWord();//声明并且实例化一个对象
         protected void Page_Load(object sender, EventArgs e)
         {
-            string sqlstr = "SELECT a.*,b.product_id as Bproduct_id,b.product_time  FROM [db_forminf].[dbo].[summer_indent] a left join [db_forminf].[dbo].[product] b on a.product_id = b.id where b.shop_id='S0000082' ";
+            string sqlstr = "SELECT a.*,b.product_id as Bproduct_id,b.product_time  FROM [db_forminf].[dbo].[summer_indent] a left join [db_forminf].[dbo].[product] b on a.product_id = b.id where b.shop_id='S0000081' ";
             DataTable dt1 = lw.GetDataTable1(sqlstr);
             DataView myView1 = dt1.DefaultView;
 
