@@ -26,7 +26,7 @@ namespace SummerCamp
         {
             string product_name, product_d, product_time, fee, img_route;
             PlaceHolderList.Controls.Clear();
-            string sqlstr = "SELECT * FROM [db_forminf].[dbo].[product] where shop_id='S0000079' and  (Is_inner ='Z' OR Is_inner = 'N') AND Is_open = 'Y'  and  id =" + ida;
+            string sqlstr = "SELECT * FROM [db_forminf].[dbo].[product] where shop_id='S0000083' and  (Is_inner ='Z' OR Is_inner = 'N') AND Is_open = 'Y'  and  id =" + ida;
             DataSet myViewDate = lw.ReturnDataSet(sqlstr, "product");
             if (myViewDate.Tables[0].Rows.Count > 0)
             {

@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-     <title>2024暑期戴维斯夏校</title>
+     <title>2024康桥幼儿园夏令营</title>
 </head>
 <body>
     <SCRIPT LANGUAGE="JavaScript">
@@ -53,7 +53,7 @@
             <table rules="all" border="1" style="width:2000px;"  class="tb1">
             <tr style="height:40px; background-color:#CC5599;">
                 <td colspan="19" style="text-align:center; width:100%;">
-                    <span style="color:White; font-size:20px;">2024暑期戴维斯夏校(校外)</span>
+                    <span style="color:White; font-size:20px;">2024康桥幼儿园夏令营(校外)</span>
                 </td>
             </tr>
             <tr style="background-color:#6B696B; height:30px; font-size:14px;">
