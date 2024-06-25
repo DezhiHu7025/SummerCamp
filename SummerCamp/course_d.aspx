@@ -21,7 +21,7 @@
                         <asp:PlaceHolder ID="PlaceHolderList" runat="server" EnableViewState="False"></asp:PlaceHolder>
                           <div class="toolbar order">
                         <div class="toolbar-inner">
-                            <a href="course.aspx" class="item-link">返回<br />
+                            <a href="courseALL.aspx" class="item-link">返回<br />
                             </a>
                             |
         <a href="checkpay.aspx?id=<%=id%>" class="item-link ">立即预约<br />

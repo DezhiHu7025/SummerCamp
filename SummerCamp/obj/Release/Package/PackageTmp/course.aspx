@@ -6,7 +6,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1" />
-    <title>康桥2024暑期新生成长营</title>
+    <title>2024康桥夏令营</title>
     <link href="css/app.css" rel="stylesheet" />
 </head>
 <body class="framework7-root">
@@ -25,9 +25,12 @@
                                <table border="1"></table>
                            <img src="img/5.png" width="100%" />
 						   </div>
-                             <ul>
+                             <a href="courseAll.aspx" >
+                                   网址错误，点击跳转正确网址
+                                </a>
+                           <%--  <ul>
                             <asp:PlaceHolder ID="PlaceHolderList" runat="server" EnableViewState="False"></asp:PlaceHolder>
-                            </ul>
+                            </ul>--%>
                        </div>
                     </div>
                 </div>
@@ -38,7 +41,7 @@
 
                         <div class="toolbar tabbar">
                             <div class="toolbar-inner">
-                                <a href="course.aspx" class="tab-link ajax active">
+                                <a href="courseAll.aspx" class="tab-link ajax active">
                                     <i class="icon icon-class"></i>课程
                                 </a>
 

@@ -6,7 +6,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1" />
-    <title>康桥2024暑期新生成长营</title>
+    <title>2024康桥夏令营</title>
     <link href="css/app.css" rel="stylesheet" />
 </head>
 <body style="font-family:'Microsoft YaHei',Arial;font-size:100%;background: url(img/bg.jpg);background-repeat: no-repeat;background-attachment: fixed;background-position: center;background-size: cover;">
@@ -14,7 +14,7 @@
     <div class="choose">
         <div class="hui">您是？</div>
         <a href="https://portal.kcisec.com/China/Account/Login" class="kuai kuai1">校内家长</a><br />
-        <a href="course.aspx"  class="kuai kuai2">校外家长</a>
+        <a href="courseAll.aspx"  class="kuai kuai2">校外家长</a>
     </div>
     </form>
 </body>

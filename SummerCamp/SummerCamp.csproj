@@ -18,6 +18,9 @@
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <IISExpressWindowsAuthentication />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -65,8 +68,16 @@
     <Content Include="bin\NPOI.dll" />
     <Content Include="bin\SummerCamp.dll" />
     <Content Include="bin\SummerCamp.pdb" />
+    <Content Include="checkpay2.aspx" />
     <Content Include="checkpay.aspx" />
     <Content Include="choose.aspx" />
+    <Content Include="course_d2.aspx" />
+    <Content Include="course_sports.aspx" />
+    <Content Include="course_educate.aspx" />
+    <Content Include="course_music.aspx" />
+    <Content Include="course_en.aspx" />
+    <Content Include="course_swim.aspx" />
+    <Content Include="courseALL.aspx" />
     <Content Include="course.aspx" />
     <Content Include="course_d.aspx" />
     <Content Include="css\app.css" />
@@ -95,6 +106,7 @@
     <Content Include="img\logo_denglu.png" />
     <Content Include="img\swim.jpg" />
     <Content Include="img\tishi.png" />
+    <Content Include="info_op.aspx" />
     <Content Include="info.aspx" />
     <Content Include="js\app.js" />
     <Content Include="js\check.js" />
@@ -125,6 +137,13 @@
   <ItemGroup>
     <Compile Include="App_Data\LeaveWord.cs" />
     <Compile Include="App_Data\Utils.cs" />
+    <Compile Include="checkpay2.aspx.cs">
+      <DependentUpon>checkpay2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkpay2.aspx.designer.cs">
+      <DependentUpon>checkpay2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="checkpay.aspx.cs">
       <DependentUpon>checkpay.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -140,6 +159,55 @@
       <DependentUpon>choose.aspx</DependentUpon>
     </Compile>
     <Compile Include="ClassStudent.cs" />
+    <Compile Include="course_d2.aspx.cs">
+      <DependentUpon>course_d2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="course_d2.aspx.designer.cs">
+      <DependentUpon>course_d2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="course_sports.aspx.cs">
+      <DependentUpon>course_sports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="course_sports.aspx.designer.cs">
+      <DependentUpon>course_sports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="course_educate.aspx.cs">
+      <DependentUpon>course_educate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="course_educate.aspx.designer.cs">
+      <DependentUpon>course_educate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="course_music.aspx.cs">
+      <DependentUpon>course_music.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="course_music.aspx.designer.cs">
+      <DependentUpon>course_music.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="course_en.aspx.cs">
+      <DependentUpon>course_en.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="course_en.aspx.designer.cs">
+      <DependentUpon>course_en.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="course_swim.aspx.cs">
+      <DependentUpon>course_swim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="course_swim.aspx.designer.cs">
+      <DependentUpon>course_swim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="courseALL.aspx.cs">
+      <DependentUpon>courseALL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="courseALL.aspx.designer.cs">
+      <DependentUpon>courseALL.aspx</DependentUpon>
+    </Compile>
     <Compile Include="course.aspx.cs">
       <DependentUpon>course.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -153,6 +221,13 @@
     </Compile>
     <Compile Include="course_d.aspx.designer.cs">
       <DependentUpon>course_d.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="info_op.aspx.cs">
+      <DependentUpon>info_op.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="info_op.aspx.designer.cs">
+      <DependentUpon>info_op.aspx</DependentUpon>
     </Compile>
     <Compile Include="info.aspx.cs">
       <DependentUpon>info.aspx</DependentUpon>

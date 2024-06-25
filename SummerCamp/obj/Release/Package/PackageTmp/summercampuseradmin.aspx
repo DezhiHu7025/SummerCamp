@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-     <title>康桥2024暑期新生成长营</title>
+     <title>2024康桥夏令营</title>
 </head>
 <body>
     <SCRIPT LANGUAGE="JavaScript">
@@ -53,14 +53,14 @@
             <table rules="all" border="1" style="width:2000px;"  class="tb1">
             <tr style="height:40px; background-color:#CC5599;">
                 <td colspan="19" style="text-align:center; width:100%;">
-                    <span style="color:White; font-size:20px;">康桥2024暑期新生成长营(校外)</span>
+                    <span style="color:White; font-size:20px;">2024康桥夏令营(校外)</span>
                 </td>
             </tr>
             <tr style="background-color:#6B696B; height:30px; font-size:14px;">
                 <td align="center" style="color:Black; width:5%;"><span style="color:White;">支付项目ID</span></td>
                 <td align="center" style="color:Black; width:8%;"><span style="color:White;">支付项目</span></td>
                 <td align="center" style="color:Black; width:5%;"><span style="color:White;">开课时间</span></td>
-                <td align="center" style="color:Black; width:5%;"><span style="color:White;">学号</span></td>
+              <%--  <td align="center" style="color:Black; width:5%;"><span style="color:White;">学号</span></td>--%>
                 <td align="center" style="color:Black; width:5%;"><span style="color:White;">学生姓名</span></td>
                 <td align="center" style="color:Black; width:4%;"><span style="color:White;">性别</span></td>
                 <td align="center" style="color:Black; width:4%;"><span style="color:White;">生日</span></td>
@@ -76,6 +76,9 @@
                 <td align="center" style="color:Black; width:8%;"><span style="color:White;">实付时间</span></td>
                 <td align="center" style="color:Black; width:8%;"><span style="color:White;">交易状态</span></td>
                 <td align="center" style="color:Black; width:5%;"><span style="color:White;">介绍人</span></td>
+                <td align="center" style="color:Black; width:5%;"><span style="color:White;">班别</span></td>
+                <td align="center" style="color:Black; width:5%;"><span style="color:White;">日期</span></td>
+                <td align="center" style="color:Black; width:5%;"><span style="color:White;">时间段</span></td>
             </tr>
             <asp:PlaceHolder ID="PlaceHolderList" runat="server" EnableViewState="False"></asp:PlaceHolder>
             </table>

@@ -87,17 +87,13 @@
                                                     <%--<asp:TextBox ID="txt_gread" runat="server" Width="100%" BorderWidth="0px" Font-Size="14px" ForeColor="Gray"></asp:TextBox>--%>
                                                     <asp:DropDownList ID="drp_gread" runat="server" Width="100%" Font-Size="14px" ForeColor="#666666">
                                                         <asp:ListItem value="0">---请选择在读年级---</asp:ListItem>
-                                                      <%--  <asp:ListItem value="1">一年级G1</asp:ListItem>
+                                                        <%--<asp:ListItem value="-1">大班</asp:ListItem>--%>
+                                                        <asp:ListItem value="1">一年级G1</asp:ListItem>
                                                         <asp:ListItem value="2">二年级G2</asp:ListItem>
                                                         <asp:ListItem value="3">三年级G3</asp:ListItem>
-                                                        <asp:ListItem value="4">四年级G4</asp:ListItem>--%>
-                                                       <%-- <asp:ListItem value="5">五年级G5</asp:ListItem>--%>
+                                                        <asp:ListItem value="4">四年级G4</asp:ListItem>
+                                                        <asp:ListItem value="5">五年级G5</asp:ListItem>
                                                         <asp:ListItem value="6">六年级G6</asp:ListItem>
-                                                        <asp:ListItem value="7">七年级G7</asp:ListItem>
-                                                        <asp:ListItem value="8">八年级G8</asp:ListItem>
-                                                        <asp:ListItem value="9">九年级G9</asp:ListItem>
-                                                        <asp:ListItem value="10">十年级G10</asp:ListItem>
-                                                          <asp:ListItem value="99">成人</asp:ListItem>
                                                     </asp:DropDownList>
                                                 </div>
                                             </div>
@@ -156,7 +152,7 @@
                                     </li>
                                     <li class="item-content" id="Iszhusu" runat="server" >
                                         <div class="item-inner">
-                                            <div class="item-title">是否选择住宿<span style="font-size:12px;">（一周费用1600元）</span>:</div>
+                                            <div class="item-title">是否选择住宿<span style="font-size:12px;">（一周费用500元）</span>:</div>
                                             <div class="item-after" style="color: #920783;">
                                                   <asp:DropDownList ID="dbl_Iszhusu" runat="server" Font-Names="微軟正黑體" 
                                                         AutoPostBack="True" 

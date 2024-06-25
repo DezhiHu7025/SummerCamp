@@ -49,3 +49,12 @@ D:\dev\语言中心SummerCamp240329-S0000080\SummerCamp\SummerCamp\obj\Debug\Sum
 D:\dev\语言中心SummerCamp240329-S0000080\SummerCamp\SummerCamp\obj\Debug\SummerCamp.csproj.CopyComplete
 D:\dev\语言中心SummerCamp240329-S0000080\SummerCamp\SummerCamp\obj\Debug\SummerCamp.dll
 D:\dev\语言中心SummerCamp240329-S0000080\SummerCamp\SummerCamp\obj\Debug\SummerCamp.pdb
+D:\夏令营交接\语言中心SummerCamp240329-S0000080\SummerCamp\SummerCamp\bin\SummerCamp.dll.config
+D:\夏令营交接\语言中心SummerCamp240329-S0000080\SummerCamp\SummerCamp\bin\SummerCamp.dll
+D:\夏令营交接\语言中心SummerCamp240329-S0000080\SummerCamp\SummerCamp\bin\SummerCamp.pdb
+D:\夏令营交接\语言中心SummerCamp240329-S0000080\SummerCamp\SummerCamp\bin\NPOI.dll
+D:\夏令营交接\语言中心SummerCamp240329-S0000080\SummerCamp\SummerCamp\obj\Debug\SummerCamp.csproj.CoreCompileInputs.cache
+D:\夏令营交接\语言中心SummerCamp240329-S0000080\SummerCamp\SummerCamp\obj\Debug\SummerCamp.csproj.CopyComplete
+D:\夏令营交接\语言中心SummerCamp240329-S0000080\SummerCamp\SummerCamp\obj\Debug\SummerCamp.dll
+D:\夏令营交接\语言中心SummerCamp240329-S0000080\SummerCamp\SummerCamp\obj\Debug\SummerCamp.pdb
+D:\夏令营交接\语言中心SummerCamp240329-S0000080\SummerCamp\SummerCamp\obj\Debug\SummerCamp.csprojAssemblyReference.cache

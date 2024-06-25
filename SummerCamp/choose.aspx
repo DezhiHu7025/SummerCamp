@@ -14,7 +14,7 @@
     <div class="choose">
         <div class="hui">您是？</div>
         <a href="https://portal.kcisec.com/China/Account/Login" class="kuai kuai1">校内家长</a><br />
-        <a href="course.aspx"  class="kuai kuai2">校外家长</a>
+        <a href="courseAll.aspx"  class="kuai kuai2">校外家长</a>
     </div>
     </form>
 </body>

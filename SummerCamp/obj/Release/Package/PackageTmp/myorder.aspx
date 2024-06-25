@@ -34,7 +34,7 @@
                         </div>
                         <div class="toolbar order">
                             <div class="toolbar-inner">
-                                <a href="course.aspx" class="item-link">返回</a> 
+                                <a href="courseall.aspx" class="item-link">返回</a> 
                             </div>
                         </div>
                     </div>

@@ -6,7 +6,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1" />
-    <title>康桥2024暑期新生成长营</title>
+    <title>2024康桥夏令营</title>
     <link href="css/app.css" rel="stylesheet" />
 </head>
 <body class="framework7-root">
@@ -21,7 +21,7 @@
                         <asp:PlaceHolder ID="PlaceHolderList" runat="server" EnableViewState="False"></asp:PlaceHolder>
                           <div class="toolbar order">
                         <div class="toolbar-inner">
-                            <a href="course.aspx" class="item-link">返回<br />
+                            <a href="courseALL.aspx" class="item-link">返回<br />
                             </a>
                             |
         <a href="checkpay.aspx?id=<%=id%>" class="item-link ">立即预约<br />

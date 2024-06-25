@@ -66,7 +66,7 @@ namespace SummerCamp
 
             PlaceHolderList.Controls.Clear();
 
-            string sqlstr = "select b.orderInfo,b.inExtData,b.remark as remark_b,a.amount,a.centerSeqId,a.remark as remark_a,a.noticetime,b.mchSeqNo  from [KsisecPay].[dbo].[Pay_Before] b left join  [KsisecPay].[dbo].[Pay_After] a on a.merchantSeq=b.merchantSeq where a.id is not null  and a.refundtime is null and a.id>22 and orderInfo='2024康桥夏令营'  order by a.noticetime desc";
+            string sqlstr = "select b.orderInfo,b.inExtData,b.remark as remark_b,a.amount,a.centerSeqId,a.remark as remark_a,a.noticetime,b.mchSeqNo  from [KsisecPay].[dbo].[Pay_Before] b left join  [KsisecPay].[dbo].[Pay_After] a on a.merchantSeq=b.merchantSeq where  a.id IS NOT NULL AND a.refundtime IS NULL AND a.id > 22 AND orderInfo='2024康桥夏令营'  order by a.noticetime desc";
             DataTable dt = lw.GetDataTable(sqlstr);
             DataView myView = dt.DefaultView;
 
@@ -81,7 +81,7 @@ namespace SummerCamp
                 string remark_a = myRow["remark_a"].ToString().Trim();
                 string mchSeqNo = myRow["mchSeqNo"].ToString().Trim();
 
-                string sqlstr1 = "SELECT a.*,b.product_id as Bproduct_id,b.product_time  FROM [db_forminf].[dbo].[summer_indent] a left join [db_forminf].[dbo].[product] b on a.product_id = b.id where b.shop_id='S0000081' and  a.mchSeqNo = '" + mchSeqNo + "' ";
+                string sqlstr1 = "SELECT a.*, CASE a.grade WHEN 99 THEN '成人' WHEN 88 THEN '青少年' WHEN 77 THEN '小学' WHEN 66 THEN '幼儿园' ELSE a.grade  END AS grade2,b.product_id as Bproduct_id,b.product_time  FROM [db_forminf].[dbo].[summer_indent] a left join [db_forminf].[dbo].[product] b on a.product_id = b.id where b.shop_id='S0000081' and  a.mchSeqNo = '" + mchSeqNo + "' ";
                 DataTable dt1 = lw.GetDataTable1(sqlstr1);
                 DataView myView1 = dt1.DefaultView;
 
@@ -110,7 +110,7 @@ namespace SummerCamp
                         string sex = myRow1["sex"].ToString().Trim();
                         string jiguan = myRow1["jiguan"].ToString().Trim();
                         string address = myRow1["address"].ToString().Trim();
-                        string grade = myRow1["grade"].ToString().Trim();
+                        string grade = myRow1["grade2"].ToString().Trim();
                         string schoolname = myRow1["schoolname"].ToString().Trim();
                         string pname = myRow1["pname"].ToString().Trim();
                         string phone = myRow1["phone"].ToString().Trim();
@@ -118,7 +118,10 @@ namespace SummerCamp
                         string introducer = myRow1["introducer"].ToString().Trim();
                         string Is_zhusu = myRow1["Is_zhusu"].ToString().Trim();
                         string zhusu_num = myRow1["zhusu_num"].ToString().Trim();
-                        string birthday = myRow1["birthday"].ToString().Trim(); 
+                        string birthday = myRow1["birthday"].ToString().Trim();
+                        string cclass = myRow1["class"].ToString().Trim();
+                        string date = myRow1["date"].ToString().Trim();
+                        string time = myRow1["time"].ToString().Trim();
                         CssClass = i % 2 == 0 ? "RowOne" : "RowTwo";
                         //Color1 = CoughtTwoWeek == "True" ? "Red" : "Gray";
                         //Color2 = CoughtWithSputum == "True" ? "Red" : "Gray";
@@ -130,7 +133,7 @@ namespace SummerCamp
                         PlaceHolderList.Controls.Add(new LiteralControl("<td align=\"center\"><span style=\"color:#117ED0;\">" + product_id + "</span></td>"));
                         PlaceHolderList.Controls.Add(new LiteralControl("<td align=\"center\"><span style=\"color:#117ED0;\">" + inExtData + "</span></td>"));
                         PlaceHolderList.Controls.Add(new LiteralControl("<td align=\"center\"><span style=\"color:#117ED0;\">" + remark_b + "</span></td>"));
-                        PlaceHolderList.Controls.Add(new LiteralControl("<td align=\"center\"><span style=\"color:#117ED0;\">" + stunum + "</span></td>"));
+                      //  PlaceHolderList.Controls.Add(new LiteralControl("<td align=\"center\"><span style=\"color:#117ED0;\">" + stunum + "</span></td>"));
                         PlaceHolderList.Controls.Add(new LiteralControl("<td align=\"center\"><span style=\"color:#117ED0;\">" + stuname + "</span></td>"));
                         PlaceHolderList.Controls.Add(new LiteralControl("<td align=\"center\"><span style=\"color:#117ED0;\">" + sex + "</span></td>"));
                         PlaceHolderList.Controls.Add(new LiteralControl("<td align=\"center\"><span style=\"color:#117ED0;\">" + birthday + "</span></td>"));
@@ -146,6 +149,10 @@ namespace SummerCamp
                         PlaceHolderList.Controls.Add(new LiteralControl("<td align=\"center\"><span style=\"color:#117ED0;\">" + noticetime + "</span></td>"));
                         PlaceHolderList.Controls.Add(new LiteralControl("<td align=\"center\"><span style=\"color:#117ED0;\">" + remark_a + "</span></td>"));
                         PlaceHolderList.Controls.Add(new LiteralControl("<td align=\"center\"><span style=\"color:#117ED0;\">" + introducer + "</span></td>"));
+                        PlaceHolderList.Controls.Add(new LiteralControl("<td align=\"center\"><span style=\"color:#117ED0;\">" + cclass + "</span></td>"));
+                        PlaceHolderList.Controls.Add(new LiteralControl("<td align=\"center\"><span style=\"color:#117ED0;\">" + date + "</span></td>"));
+                        PlaceHolderList.Controls.Add(new LiteralControl("<td align=\"center\"><span style=\"color:#117ED0;\">" + time + "</span></td>"));
+
                         //PlaceHolderList.Controls.Add(new LiteralControl("<td align=\"center\"><span style=\"color:" + Color1 + ";\">" + CoughtTwoWeek + "</span></td>"));
                         //PlaceHolderList.Controls.Add(new LiteralControl("<td align=\"center\"><span style=\"color:" + Color2 + ";\">" + CoughtWithSputum + "</td>"));
                         //PlaceHolderList.Controls.Add(new LiteralControl("<td align=\"center\"><span style=\"color:" + Color3 + ";\">" + FeelChestPains + "</span></td>"));
@@ -252,6 +259,10 @@ namespace SummerCamp
             DataColumn dc17 = new DataColumn("实付时间", Type.GetType("System.String"));
             DataColumn dc18 = new DataColumn("交易状态", Type.GetType("System.String"));
             DataColumn dc19 = new DataColumn("介绍人", Type.GetType("System.String"));
+            DataColumn dc20 = new DataColumn("班别", Type.GetType("System.String"));
+            DataColumn dc21 = new DataColumn("日期", Type.GetType("System.String"));
+            DataColumn dc22 = new DataColumn("时间段", Type.GetType("System.String"));
+
 
             dt_upload.Columns.Add(dc1);
             dt_upload.Columns.Add(dc2);
@@ -272,25 +283,30 @@ namespace SummerCamp
             dt_upload.Columns.Add(dc17);
             dt_upload.Columns.Add(dc18);
             dt_upload.Columns.Add(dc19);
+            dt_upload.Columns.Add(dc20);
+            dt_upload.Columns.Add(dc21);
+            dt_upload.Columns.Add(dc22);
 
 
 
-            string sqlstr = "select b.orderInfo,b.inExtData,b.remark as remark_b,a.amount,a.centerSeqId,a.remark as remark_a,a.noticetime,b.mchSeqNo  from [KsisecPay].[dbo].[Pay_Before] b left join  [KsisecPay].[dbo].[Pay_After] a on a.merchantSeq=b.merchantSeq where a.id is not null  and a.refundtime is null and a.id>22 and orderInfo='2024康桥夏令营'  order by a.noticetime asc";
+            string sqlstr = "select b.orderInfo,b.inExtData,b.remark as remark_b,a.amount,a.centerSeqId,a.remark as remark_a,a.noticetime,b.mchSeqNo  from [KsisecPay].[dbo].[Pay_Before] b left join  [KsisecPay].[dbo].[Pay_After] a on a.merchantSeq=b.merchantSeq where  a.id IS NOT NULL AND a.refundtime IS NULL AND a.id > 22 AND orderInfo='2024康桥夏令营'  order by a.noticetime asc";
             DataTable dt = lw.GetDataTable(sqlstr);
             DataView myView = dt.DefaultView;
 
             foreach (DataRowView myRow in myView)
             {
-                string noticetime = Convert.ToDateTime(myRow["noticetime"].ToString().Trim()).ToString("yyyy-MM-dd HH:mm:ss");
+                // string noticetime = Convert.ToDateTime(myRow["noticetime"].ToString().Trim()).ToString("yyyy-MM-dd HH:mm:ss");
+                string noticetime = "";
                 string orderInfo = myRow["orderInfo"].ToString().Trim();
                 string inExtData = myRow["inExtData"].ToString().Trim();
                 string remark_b = myRow["remark_b"].ToString().Trim();
-                string amount = Convert.ToString(Convert.ToInt32(myRow["amount"].ToString().Trim()) * 0.01);
+                //string amount = Convert.ToString(Convert.ToInt32(myRow["amount"].ToString().Trim()) * 0.01);
+                string amount = "";
                 string centerSeqId = myRow["centerSeqId"].ToString().Trim();
                 string remark_a = myRow["remark_a"].ToString().Trim();
                 string mchSeqNo = myRow["mchSeqNo"].ToString().Trim();
 
-                string sqlstr1 = "SELECT a.*,b.product_id as Bproduct_id,b.product_time  FROM [db_forminf].[dbo].[summer_indent] a left join [db_forminf].[dbo].[product] b on a.product_id = b.id where b.shop_id='S0000081' and  a.mchSeqNo = '" + mchSeqNo + "' ";
+                string sqlstr1 = "SELECT a.*, CASE a.grade WHEN 99 THEN '成人' WHEN 88 THEN '青少年' WHEN 77 THEN '小学' WHEN 66 THEN '幼儿园' ELSE a.grade  END AS grade2,b.product_id as Bproduct_id,b.product_time  FROM [db_forminf].[dbo].[summer_indent] a left join [db_forminf].[dbo].[product] b on a.product_id = b.id where b.shop_id='S0000081' and  a.mchSeqNo = '" + mchSeqNo + "' ";
                 DataTable dt1 = lw.GetDataTable1(sqlstr1);
                 DataView myView1 = dt1.DefaultView;
 
@@ -319,7 +335,7 @@ namespace SummerCamp
                     string sex = myRow1["sex"].ToString().Trim();
                     string jiguan = myRow1["jiguan"].ToString().Trim();
                     string address = myRow1["address"].ToString().Trim();
-                    string grade = myRow1["grade"].ToString().Trim();
+                    string grade = myRow1["grade2"].ToString().Trim();
                     string schoolname = myRow1["schoolname"].ToString().Trim();
                     string pname = myRow1["pname"].ToString().Trim();
                     string phone = myRow1["phone"].ToString().Trim();
@@ -328,6 +344,9 @@ namespace SummerCamp
                     string Is_zhusu = myRow1["Is_zhusu"].ToString().Trim();
                     string zhusu_num = myRow1["zhusu_num"].ToString().Trim();
                     string birthday = myRow1["birthday"].ToString().Trim();
+                    string cclass = myRow1["class"].ToString().Trim();
+                    string date = myRow1["date"].ToString().Trim();
+                    string time = myRow1["time"].ToString().Trim();
                     //    CssClass = i % 2 == 0 ? "RowOne" : "RowTwo";
                     //    //Color1 = CoughtTwoWeek == "True" ? "Red" : "Gray";
                     //    //Color2 = CoughtWithSputum == "True" ? "Red" : "Gray";
@@ -388,6 +407,9 @@ namespace SummerCamp
                     drt["实付时间"] = noticetime;
                     drt["交易状态"] = remark_a;
                     drt["介绍人"] = introducer;
+                    drt["班别"] = cclass;
+                    drt["日期"] = date;
+                    drt["时间段"] = time;
 
                     dt_upload.Rows.Add(drt);
 

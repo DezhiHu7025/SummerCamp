@@ -167,7 +167,7 @@ namespace SummerCamp
             else
             {
 
-                Response.Write("<script language=javascript>alert('该课程报名已满！');window.location = 'course.aspx';</script>");
+                Response.Write("<script language=javascript>alert('该课程报名已满！');window.location = 'courseAll.aspx';</script>");
             }
         }
 
@@ -309,7 +309,7 @@ namespace SummerCamp
             else
             {
 
-                Response.Write("<script language=javascript>alert('该课程报名已满！');window.location = 'course.aspx';</script>");
+                Response.Write("<script language=javascript>alert('该课程报名已满！');window.location = 'courseAll.aspx';</script>");
 
             }
 

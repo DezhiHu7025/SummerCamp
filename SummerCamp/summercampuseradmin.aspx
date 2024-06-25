@@ -60,7 +60,7 @@
                 <td align="center" style="color:Black; width:5%;"><span style="color:White;">支付项目ID</span></td>
                 <td align="center" style="color:Black; width:8%;"><span style="color:White;">支付项目</span></td>
                 <td align="center" style="color:Black; width:5%;"><span style="color:White;">开课时间</span></td>
-                <td align="center" style="color:Black; width:5%;"><span style="color:White;">学号</span></td>
+              <%--  <td align="center" style="color:Black; width:5%;"><span style="color:White;">学号</span></td>--%>
                 <td align="center" style="color:Black; width:5%;"><span style="color:White;">学生姓名</span></td>
                 <td align="center" style="color:Black; width:4%;"><span style="color:White;">性别</span></td>
                 <td align="center" style="color:Black; width:4%;"><span style="color:White;">生日</span></td>
@@ -76,6 +76,9 @@
                 <td align="center" style="color:Black; width:8%;"><span style="color:White;">实付时间</span></td>
                 <td align="center" style="color:Black; width:8%;"><span style="color:White;">交易状态</span></td>
                 <td align="center" style="color:Black; width:5%;"><span style="color:White;">介绍人</span></td>
+                <td align="center" style="color:Black; width:5%;"><span style="color:White;">班别</span></td>
+                <td align="center" style="color:Black; width:5%;"><span style="color:White;">日期</span></td>
+                <td align="center" style="color:Black; width:5%;"><span style="color:White;">时间段</span></td>
             </tr>
             <asp:PlaceHolder ID="PlaceHolderList" runat="server" EnableViewState="False"></asp:PlaceHolder>
             </table>
